@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{5F734F68-17BF-40A0-B053-710ABCC34A22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFapp", "WPFapp\WPFapp.csproj", "{841FA886-0A06-4AFC-A531-C9FC9737C548}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

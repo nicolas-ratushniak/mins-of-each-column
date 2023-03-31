@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MatrixLib\MatrixLib.csproj" />
-    <ProjectReference Include="..\SearchLib\SearchLib.csproj" />
-    <ProjectReference Include="..\SortLib\SortLib.csproj" />
   </ItemGroup>
 
 </Project>
