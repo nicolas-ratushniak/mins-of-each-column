@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{5F734F68-17BF-40A0-B053-710ABCC34A22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{5F734F68-17BF-40A0-B053-710ABCC34A22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortLib", "SortLib\SortLib.csproj", "{CC9D262C-3C34-424B-B536-02C685A699EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchLib", "SearchLib\SearchLib.csproj", "{6837B2FC-C61D-4494-9AF5-6D7A1B51C20D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFapp", "WPFapp\WPFapp.csproj", "{841FA886-0A06-4AFC-A531-C9FC9737C548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFapp", "WPFapp\WPFapp.csproj", "{841FA886-0A06-4AFC-A531-C9FC9737C548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +17,6 @@ Global
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC9D262C-3C34-424B-B536-02C685A699EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC9D262C-3C34-424B-B536-02C685A699EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC9D262C-3C34-424B-B536-02C685A699EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC9D262C-3C34-424B-B536-02C685A699EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6837B2FC-C61D-4494-9AF5-6D7A1B51C20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6837B2FC-C61D-4494-9AF5-6D7A1B51C20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6837B2FC-C61D-4494-9AF5-6D7A1B51C20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6837B2FC-C61D-4494-9AF5-6D7A1B51C20D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841FA886-0A06-4AFC-A531-C9FC9737C548}.Release|Any CPU.ActiveCfg = Release|Any CPU
