@@ -43,6 +43,7 @@
                         Margin="0,50,40,50">
 
                 <Button x:Name="clearButton" 
+                        Click="clearButton_Click"
                         Content="Clear"
                         Height="30"
                         Background="AliceBlue"
