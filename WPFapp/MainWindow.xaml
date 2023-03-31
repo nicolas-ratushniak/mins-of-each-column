@@ -66,11 +66,10 @@
                          TextAlignment="Justify"
                          Background="Transparent"
                          Margin="0,10,0,0">
-                        What to do? Enter a matrix of doubles using 
-                        spaces as the delimiters. You can also use 
-                        matrix generator clicking "Generate" button.
-                        Then Click on "Calculate" to see minimun elements 
-                        of each colomn of the matrix
+                        Enter a matrix of doubles using 
+                        spaces as the delimiters. You can also click on "Generate"
+                        button to generate a 4x6 matrix. Then Click on "Calculate" to 
+                        see the minimum elements of each column of the matrix
                     </TextBlock>
                     
                 </StackPanel>
