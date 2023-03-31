@@ -1,6 +1,3 @@
-# My first WPF Project ever
+# Get an array of matrix minimum elements in each colomn
 
-The app consists 3 views:
-* processing user matrix 
-* show 8 sort algorithms  in action
-* show 3 searching algorithms 
+It's a WPF program to enter matrix and the result is an array of minimum elements of each colomn displayed
