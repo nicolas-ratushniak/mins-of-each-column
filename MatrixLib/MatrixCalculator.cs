@@ -4,9 +4,14 @@ public static class MatrixCalculator
 {
     public static double[] GetMinsOfEachColomn(in double[,] matrix)
     {
+        if (matrix is null)
+        {
+            throw new ArgumentNullException(nameof(matrix));
+        }
+
         var result = new double[matrix.GetLength(1)];
 
-        for (int col = 0;  col < matrix.GetLength(1); col++)
+        for (int col = 0; col < matrix.GetLength(1); col++)
         {
             double minInRow = matrix[0, col];
 
