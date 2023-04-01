@@ -53,11 +53,11 @@ public class MatrixBuilder
     }
 
     /// <summary>
-    /// Populates matrix with random numbers ranging from min to max exclusively.
+    /// Populates matrix with random numbers ranging from min to max inclusively.
     /// </summary>
     /// <param name="matrix">Not null matrix</param>
     /// <param name="min">The inclusive lower bound of the random number returned</param>
-    /// <param name="max">The exclusive upper bound of the random number returned.</param>
+    /// <param name="max">The inclusive upper bound of the random number returned.</param>
     /// <param name="precision">Max amount of digits in fractional part.</param>
     /// <param name="rand">An instance of random number generator</param>
     private static void PopulateWithRandoms(double[,] matrix, int min, int max, int precision, Random rand)
@@ -67,7 +67,7 @@ public class MatrixBuilder
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 int wholePart = rand.Next(min, max);
-                double fractionalPart = Math.Round(rand.NextDouble(), precision);
+                double fractionalPart = Math.Round(rand.NextDouble(), precision, MidpointRounding.AwayFromZero);
 
                 matrix[i, j] = wholePart + fractionalPart;
             }
