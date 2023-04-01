@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using MatrixLib;
@@ -36,9 +37,39 @@ namespace WpfApp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+        private static double[,] GenerateDefaultMatrix()
+        {
+            double[,] matrix;
+
+            MatrixBuilder builder = new();
+            builder.SetSize(4, 6);
+            builder.SetPrecision(1);
+            builder.SetRange(-10, 11);
+            matrix = builder.Build();
+
+            return matrix;
+        }
+
+        private static MatrixDecoder GetDefaultMatrixDecoder()
+        {
+            MatrixDecoder decoder = new(new CultureInfo("en-US"));
+            return decoder;
+        }
+
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             MatrixInput = "";
+            
+        }
+
+        private void generateButton_Click(object sender, RoutedEventArgs e)
+        {
+            double[,] matrix = GenerateDefaultMatrix();
+            MatrixDecoder decoder = GetDefaultMatrixDecoder();
+
+            string result = decoder.MatrixToString(matrix);
+
+            MatrixInput = result;
         }
     }
 }

@@ -1,13 +1,29 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 
 namespace MatrixLib;
 
 public class MatrixDecoder
 {
+    public NumberStyles NumStyles { get; set; }
+    public CultureInfo Culture { get; set; }
+
     private const char _separator = ' ';
     private const char _newLine = '\n';
 
-    public static string MatrixToString(double[,] matrix)
+    public MatrixDecoder(NumberStyles numStyles, CultureInfo culture)
+    {
+        NumStyles = numStyles;
+        Culture = culture;
+    }
+
+    public MatrixDecoder(CultureInfo culture)
+    {
+        NumStyles = NumberStyles.Float;
+        Culture = culture;
+    }
+
+    public string MatrixToString(double[,] matrix)
     {
         if (matrix is null)
         {
@@ -20,18 +36,26 @@ public class MatrixDecoder
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                sb.Append(matrix[i, j]);
-                sb.Append(j < matrix.GetLength(1) - 1 ? _separator : _newLine);
+                sb.Append(matrix[i, j].ToString(Culture));
+
+                if (j < matrix.GetLength(1) - 1)
+                {
+                    sb.Append(_separator);
+                }
+            }
+            if (i < matrix.GetLength(0) - 1)
+            {
+                sb.Append(_newLine);
             }
         }
         return sb.ToString();
     }
 
-    public static bool TryParseToMatrix(string? text, out double[,]? matrix)
+    public bool TryParseToMatrix(string? text, out double[,]? matrix)
     {
         matrix = null;
 
-        if (text is null)
+        if (string.IsNullOrEmpty(text))
         {
             return false;
         }
@@ -44,16 +68,21 @@ public class MatrixDecoder
 
             if (matrix is null)
             {
-                matrix = new double[rows.Length, rows[0].Length];
+                matrix = new double[rows.Length, elemsOfRow.Length];
+            }
+            else if (elemsOfRow.Length != matrix.GetLength(1))
+            {
+                matrix = null;
+                return false;
             }
 
-            for (int j = 0; j < rows[i].Length; j++)
+            for (int j = 0; j < elemsOfRow.Length; j++)
             {
-                try
+                if (double.TryParse(elemsOfRow[j], NumStyles, Culture, out double num))
                 {
-                    matrix[i, j] = double.Parse(elemsOfRow[j]);
+                    matrix[i, j] = num;
                 }
-                catch (IndexOutOfRangeException)
+                else
                 {
                     matrix = null;
                     return false;
