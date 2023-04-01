@@ -2,6 +2,8 @@
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 using MatrixLib;
 
 namespace WpfApp
@@ -11,6 +13,8 @@ namespace WpfApp
         public event PropertyChangedEventHandler? PropertyChanged;
 
         private string _matrixInput = "";
+        private string _resultText = "";
+        private MatrixDecoder _decoder;
 
         public string MatrixInput
         {
@@ -26,8 +30,23 @@ namespace WpfApp
             }
         }
 
+        public string ResultText
+        {
+            get => _resultText;
+
+            set
+            {
+                if (_resultText != value)
+                {
+                    _resultText = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         public MainWindow()
         {
+            _decoder = GetDefaultMatrixDecoder();
             DataContext = this;
             InitializeComponent();
         }
@@ -59,15 +78,14 @@ namespace WpfApp
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             MatrixInput = "";
-            
+            ResultText = "";
         }
 
         private void generateButton_Click(object sender, RoutedEventArgs e)
         {
             double[,] matrix = GenerateDefaultMatrix();
-            MatrixDecoder decoder = GetDefaultMatrixDecoder();
 
-            string result = decoder.MatrixToString(matrix);
+            string result = _decoder.MatrixToString(matrix);
 
             MatrixInput = result;
         }
@@ -81,6 +99,23 @@ namespace WpfApp
             else
             {
                 helpTB.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(MatrixInput))
+            {
+                ResultText = "Nothing to calculate from";
+            }
+            if (_decoder.TryParseToMatrix(MatrixInput, out double[,] matrix))
+            {
+                double[] minsOfEachCol = MatrixCalculator.GetMinsOfEachColomn(matrix!);
+                ResultText = MatrixCalculator.ArrayToString(minsOfEachCol);
+            }
+            else
+            {
+                ResultText = "Invalid matrix format";
             }
         }
     }
