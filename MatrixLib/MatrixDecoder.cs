@@ -8,7 +8,7 @@ public class MatrixDecoder
     public NumberStyles NumStyles { get; set; }
     public CultureInfo Culture { get; set; }
 
-    private const char _separator = ' ';
+    private const string _separator = " ";
     private const char _newLine = '\n';
 
     public MatrixDecoder(NumberStyles numStyles, CultureInfo culture)

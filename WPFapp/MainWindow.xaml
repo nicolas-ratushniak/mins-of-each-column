@@ -95,7 +95,6 @@
                         Background="AliceBlue"
                         FontSize="16"
                         VerticalAlignment="Top"/>
-
             </Border>
         </Grid>
     </Border>
