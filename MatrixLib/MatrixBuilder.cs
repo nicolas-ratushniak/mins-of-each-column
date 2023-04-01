@@ -67,9 +67,9 @@ public class MatrixBuilder
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 int wholePart = rand.Next(min, max);
-                double fractionalPart = Math.Round(rand.NextDouble(), precision, MidpointRounding.AwayFromZero);
+                double fractionalPart = rand.NextDouble();
 
-                matrix[i, j] = wholePart + fractionalPart;
+                matrix[i, j] = Math.Round(wholePart + fractionalPart, precision, MidpointRounding.AwayFromZero); ;
             }
         }
     }
