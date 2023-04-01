@@ -71,5 +71,17 @@ namespace WpfApp
 
             MatrixInput = result;
         }
+
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (helpTB.Visibility == Visibility.Visible)
+            {
+                helpTB.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                helpTB.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
