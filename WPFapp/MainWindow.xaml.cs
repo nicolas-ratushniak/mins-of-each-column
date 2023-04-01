@@ -102,10 +102,6 @@ namespace WpfApp
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(MatrixInput))
-            {
-                ResultText = "Nothing to calculate from";
-            }
             if (_decoder.TryParseToMatrix(MatrixInput, out double[,] matrix))
             {
                 double[] minsOfEachCol = MatrixCalculator.GetMinsOfEachColomn(matrix!);
