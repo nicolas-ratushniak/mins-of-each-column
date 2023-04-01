@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{5F734F68-17BF-40A0-B053-710ABCC34A22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixLibTests", "MatrixLibTests\MatrixLibTests.csproj", "{4AF536B1-8A8A-4EBD-B4D0-08AD477B3A21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F734F68-17BF-40A0-B053-710ABCC34A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBE13B3-3569-4520-B34B-CEEFC5779CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF536B1-8A8A-4EBD-B4D0-08AD477B3A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF536B1-8A8A-4EBD-B4D0-08AD477B3A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF536B1-8A8A-4EBD-B4D0-08AD477B3A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF536B1-8A8A-4EBD-B4D0-08AD477B3A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACC36469-B2DD-4864-B8D3-C1B23B3C5E75}
+	EndGlobalSection
+EndGlobal

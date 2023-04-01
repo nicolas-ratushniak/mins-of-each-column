@@ -1,0 +1,101 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Martix Calculator" 
+        Height="520" 
+        Width="600"
+        ResizeMode="NoResize">
+
+    <Border Background="AntiqueWhite">
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="MatrixInputTB" 
+                     Text="{Binding MatrixInput}"  
+                     Margin="50"
+                     AcceptsReturn="True"
+                     FontSize="18"/>
+
+            <Border Grid.Row="1"
+                    Grid.Column="0"
+                    Background="White"
+                    Margin="50,0,50,90">
+
+                <TextBlock x:Name="resultTB" 
+                           VerticalAlignment="Center"
+                           FontSize="18"
+                           Margin="10,0,10,0"
+                           Text="{Binding ResultText}"/>
+            </Border>
+
+            <StackPanel Grid.Column="1" Orientation="Vertical"
+                        Margin="0,50,40,50">
+
+                <Button x:Name="clearButton" 
+                        Click="clearButton_Click"
+                        Content="Clear"
+                        Height="30"
+                        Background="AliceBlue"
+                        FontSize="16"/>
+
+                <Button x:Name="generateButton"  
+                        Click="generateButton_Click"
+                        Content="Generate"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Background="AliceBlue"
+                        FontSize="16"/>
+
+                <Button x:Name="helpButton" 
+                        Click="helpButton_Click"
+                        Content="Help"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Background="AliceBlue"
+                        FontSize="16"/>
+
+                <StackPanel Orientation="Vertical">
+                    
+                    <TextBlock x:Name="helpTB" FontSize="11" 
+                         TextWrapping="Wrap"
+                         TextAlignment="Justify"
+                         Background="Transparent"
+                         Margin="0,10,0,0"
+                         Visibility="Hidden">
+                         Enter a matrix of doubles using 
+                         spaces as the delimiters. You can also click on "Generate"
+                         button to generate a 4x6 matrix. Then Click on "Calculate" to 
+                         see the minimum elements of each column of the matrix
+                    </TextBlock>
+                    
+                </StackPanel>
+
+            </StackPanel>
+
+            <Border Grid.Row="1" Grid.Column="1">
+
+                <Button x:Name="calculateButton" 
+                        Click="calculateButton_Click"
+                        Content="Calculate"
+                        Height="30"
+                        Margin="0,0,40,0"
+                        Background="AliceBlue"
+                        FontSize="16"
+                        VerticalAlignment="Top"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
